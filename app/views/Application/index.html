@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>单文本演示 - BosonNLP</title>
+		<meta charset="UTF-8">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">	
+		<link media="screen" href="/public/stylesheets/jquery-ui.min.css" type="text/css" rel="stylesheet">
+		<link media="screen" href="/public/stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
+		<link media="screen" href="/public/stylesheets/global.css" type="text/css" rel="stylesheet">
+		<link media="screen" href="/public/stylesheets/toggle-switch.min.css" type="text/css" rel="stylesheet">
+		<link media="screen" href="/public/stylesheets/demo.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<body>
+	  <div id="content-page"> 
+	   <div id="sub-navbar"> 
+	    <div class="container"> 
+	     <ul> 
+	      <li class="selected"> <a href="/demo">单文本演示</a> <span></span> </li> 
+	      <li> <a href="http://bosonnlp.com/demo2">多文本演示</a> <span></span> </li> 
+	      <li> <a href="http://bosonnlp.com/lab">玻森实验室</a> <span></span> </li> 
+	     </ul> 
+	    </div> 
+	   </div> 
+	   <div id="demo-page"> 
+	    <div id="demo-container" class="container"> 
+	     <div class="breadcrumb breadcrumb-bottom"> 
+	      <span>您现在的位置:</span> 
+	      <a href="/">首页</a> 
+	      <span class="html-char">&gt;</span> 
+	      <span>演示</span> 
+	      <span class="html-char">&gt;</span> 
+	      <span>单文本演示</span> 
+	     </div> 
+	     <div class="input-chunk chunk"> 
+	      <textarea id="txt-analysis" class="input"></textarea> 
+	      <a id="btn-analysis" class="btn btn-arrow btn-radius" href="javascript:void(0)"> <span class="icon"></span> 提交文本 </a> 
+	      <div class="warn-msg hide"> 
+	       <span class="icon"></span> 
+	       <span class="txt">目前仅支持GBK字符集。分析结果已过滤暂不支持的语言或字符。</span> 
+	      </div> 
+	     </div> 
+	     <div class="main-title"> 
+	      <span class="dot-line-gray"></span> 
+	      <span class="title">分析结果</span> 
+	     </div> 
+	     <div class="demo-content"> 
+
+		  <div class="col-xs-9 main-content" role="main"> 
+		   <div id="overview-analysis" class="chunk"> 
+		    <div class="col-xs-12"> 
+		     <div class="title">
+		       词性分析: 
+		      <a class="docs" target="_blank" href="http://docs.bosonnlp.com/tag.html" style="display: none;">查看文档</a> 
+		      <a class="docs feedback" style="display: none;">结果不正确</a> 
+		     </div> 
+		    </div> 
+		    <div class="col-xs-9"> 
+		     <dl class="words"> 
+		      <dd class="v" title="动词">
+		       继
+		      </dd> 
+		      <dd class="t" title="时间词">
+		       前不久
+		      </dd> 
+		      <dd class="v" title="动词">
+		       始
+		      </dd> 
+		      <dd class="p" title="介词">
+		       于
+		      </dd> 
+		      <dd class="n" title="名词">
+		       中国
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="v" title="动词">
+		       召回
+		      </dd> 
+		      <dd class="n" title="名词">
+		       风波
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="n" title="名词">
+		       宝马
+		      </dd> 
+		      <dd class="p" title="介词">
+		       因为
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车辆
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="n" title="名词">
+		       发动机
+		      </dd> 
+		      <dd class="n" title="名词">
+		       螺栓
+		      </dd> 
+		      <dd class="n" title="名词">
+		       故障
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="p" title="介词">
+		       在
+		      </dd> 
+		      <dd class="n" title="名词">
+		       全球
+		      </dd> 
+		      <dd class="n" title="名词">
+		       范围
+		      </dd> 
+		      <dd class="d" title="副词">
+		       将
+		      </dd> 
+		      <dd class="v" title="动词">
+		       召回
+		      </dd> 
+		      <dd class="m" title="数词">
+		       48.9万
+		      </dd> 
+		      <dd class="q" title="量词">
+		       辆
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="p" title="介词">
+		       在
+		      </dd> 
+		      <dd class="v" title="动词">
+		       原有
+		      </dd> 
+		      <dd class="n" title="名词">
+		       中国
+		      </dd> 
+		      <dd class="v" title="动词">
+		       召回
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="n" title="名词">
+		       基础
+		      </dd> 
+		      <dd class="f" title="方位词">
+		       上
+		      </dd> 
+		      <dd class="n" title="名词">
+		       数量
+		      </dd> 
+		      <dd class="d" title="副词">
+		       进一步
+		      </dd> 
+		      <dd class="v" title="动词">
+		       增加
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       。
+		      </dd> 
+		      <dd class="v" title="动词">
+		       据悉
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="v" title="动词">
+		       召回
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车辆
+		      </dd> 
+		      <dd class="d" title="副词">
+		       将
+		      </dd> 
+		      <dd class="v" title="动词">
+		       包括
+		      </dd> 
+		      <dd class="n" title="名词">
+		       北美
+		      </dd> 
+		      <dd class="n" title="名词">
+		       市场
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="m" title="数词">
+		       15.6万
+		      </dd> 
+		      <dd class="q" title="量词">
+		       辆
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="n" title="名词">
+		       宝马
+		      </dd> 
+		      <dd class="d" title="副词">
+		       曾
+		      </dd> 
+		      <dd class="p" title="介词">
+		       于
+		      </dd> 
+		      <dd class="t" title="时间词">
+		       3月
+		      </dd> 
+		      <dd class="v" title="动词">
+		       宣布
+		      </dd> 
+		      <dd class="p" title="介词">
+		       在
+		      </dd> 
+		      <dd class="b" title="区别词">
+		       华
+		      </dd> 
+		      <dd class="v" title="动词">
+		       召回
+		      </dd> 
+		      <dd class="m" title="数词">
+		       232
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ,
+		      </dd> 
+		      <dd class="m" title="数词">
+		       098
+		      </dd> 
+		      <dd class="q" title="量词">
+		       辆
+		      </dd> 
+		      <dd class="n" title="名词">
+		       发动机
+		      </dd> 
+		      <dd class="n" title="名词">
+		       螺栓
+		      </dd> 
+		      <dd class="n" title="名词">
+		       故障
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车辆
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       。
+		      </dd> 
+		      <dd class="v" title="动词">
+		       涉及
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车型
+		      </dd> 
+		      <dd class="v" title="动词">
+		       包括
+		      </dd> 
+		      <dd class="v" title="动词">
+		       搭载
+		      </dd> 
+		      <dd class="m" title="数词">
+		       六
+		      </dd> 
+		      <dd class="q" title="量词">
+		       缸
+		      </dd> 
+		      <dd class="n" title="名词">
+		       发动机
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="n" title="名词">
+		       宝马
+		      </dd> 
+		      <dd class="m" title="数词">
+		       5
+		      </dd> 
+		      <dd class="n" title="名词">
+		       系
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       、
+		      </dd> 
+		      <dd class="m" title="数词">
+		       7
+		      </dd> 
+		      <dd class="n" title="名词">
+		       系
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       、
+		      </dd> 
+		      <dd class="x" title="字符串">
+		       X3
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       、
+		      </dd> 
+		      <dd class="x" title="字符串">
+		       X5
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       。
+		      </dd> 
+		      <dd class="c" title="连词">
+		       但
+		      </dd> 
+		      <dd class="a" title="形容词">
+		       具体
+		      </dd> 
+		      <dd class="n" title="名词">
+		       型号
+		      </dd> 
+		      <dd class="x" title="字符串">
+		       Santer
+		      </dd> 
+		      <dd class="c" title="连词">
+		       并
+		      </dd> 
+		      <dd class="d" title="副词">
+		       没有
+		      </dd> 
+		      <dd class="v" title="动词">
+		       透露
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       。
+		      </dd> 
+		      <dd class="n" title="名词">
+		       宝马
+		      </dd> 
+		      <dd class="n" title="名词">
+		       发言人
+		      </dd> 
+		      <dd class="x" title="字符串">
+		       Bernhard
+		      </dd> 
+		      <dd class="x" title="字符串">
+		       Santer
+		      </dd> 
+		      <dd class="v" title="动词">
+		       表示
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="t" title="时间词">
+		       目前
+		      </dd> 
+		      <dd class="d" title="副词">
+		       尚
+		      </dd> 
+		      <dd class="v" title="动词">
+		       无
+		      </dd> 
+		      <dd class="r" title="代词">
+		       该
+		      </dd> 
+		      <dd class="n" title="名词">
+		       故障
+		      </dd> 
+		      <dd class="v" title="动词">
+		       造成
+		      </dd> 
+		      <dd class="n" title="名词">
+		       事故
+		      </dd> 
+		      <dd class="c" title="连词">
+		       或
+		      </dd> 
+		      <dd class="v" title="动词">
+		       伤亡
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="n" title="名词">
+		       报告
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       。
+		      </dd> 
+		      <dd class="c" title="连词">
+		       但
+		      </dd> 
+		      <dd class="r" title="代词">
+		       他
+		      </dd> 
+		      <dd class="d" title="副词">
+		       仍
+		      </dd> 
+		      <dd class="v" title="动词">
+		       建议
+		      </dd> 
+		      <dd class="v" title="动词">
+		       相关
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车主
+		      </dd> 
+		      <dd class="a" title="形容词">
+		       及时
+		      </dd> 
+		      <dd class="v" title="动词">
+		       检查
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车辆
+		      </dd> 
+		      <dd class="n" title="名词">
+		       引擎
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       。
+		      </dd> 
+		      <dd class="x" title="字符串">
+		       Santer
+		      </dd> 
+		      <dd class="v" title="动词">
+		       说
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="p" title="介词">
+		       凭借
+		      </dd> 
+		      <dd class="v" title="动词">
+		       剩余
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="n" title="名词">
+		       动力
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       ，
+		      </dd> 
+		      <dd class="n" title="名词">
+		       车辆
+		      </dd> 
+		      <dd class="d" title="副词">
+		       仍旧
+		      </dd> 
+		      <dd class="v" title="动词">
+		       可以
+		      </dd> 
+		      <dd class="v" title="动词">
+		       坚持
+		      </dd> 
+		      <dd class="p" title="介词">
+		       到
+		      </dd> 
+		      <dd class="t" title="时间词">
+		       最近
+		      </dd> 
+		      <dd class="u" title="助词">
+		       的
+		      </dd> 
+		      <dd class="n" title="名词">
+		       修理厂
+		      </dd> 
+		      <dd class="w" title="标点符号">
+		       。
+		      </dd> 
+		     </dl> 
+		    </div> 
+		    <div class="col-xs-3"> 
+		     <dl class="word-mean"> 
+		      <dt>
+		       词性类别图示:
+		      </dt> 
+		      <dd class="v">
+		       动词
+		      </dd> 
+		      <dd class="t">
+		       时间词
+		      </dd> 
+		      <dd class="p">
+		       介词
+		      </dd> 
+		      <dd class="n">
+		       名词
+		      </dd> 
+		      <dd class="u">
+		       助词
+		      </dd> 
+		      <dd class="w">
+		       标点符号
+		      </dd> 
+		      <dd class="d">
+		       副词
+		      </dd> 
+		      <dd class="m">
+		       数词
+		      </dd> 
+		      <dd class="q">
+		       量词
+		      </dd> 
+		      <dd class="f">
+		       方位词
+		      </dd> 
+		      <dd class="b">
+		       区别词
+		      </dd> 
+		      <dd class="x">
+		       字符串
+		      </dd> 
+		      <dd class="c">
+		       连词
+		      </dd> 
+		      <dd class="a">
+		       形容词
+		      </dd> 
+		      <dd class="r">
+		       代词
+		      </dd> 
+		     </dl> 
+		    </div> 
+		    <div class="loading hide"></div> 
+		    <div class="warn-tips hide"> 
+		     <span class="icon"></span> 
+		     <span class="txt"></span> 
+		    </div> 
+		   </div> 
+
+		  </div>
+
+	     </div>
+	    </div>
+	   </div>
+	  </div>	
+
+  	<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="/public/javascripts/jquery-1.10.2.js"></script>
+  	<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="/public/javascripts/pageHelper.js"></script>	
+	<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="/public/javascripts/main.js"></script>
+
+	</body>
+</html>
